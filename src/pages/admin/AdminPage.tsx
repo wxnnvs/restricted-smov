@@ -1,7 +1,7 @@
 import { ThinContainer } from "@/components/layout/ThinContainer";
 import { Heading1, Paragraph } from "@/components/utils/Text";
 import { SubPageLayout } from "@/pages/layouts/SubPageLayout";
-import { AccountCreatePart } from "@/pages/parts/auth/AccountCreatePart"
+import { AccountCreatePart } from "@/pages/parts/auth/AccountCreatePart";
 import { ConfigValuesPart } from "@/pages/parts/admin/ConfigValuesPart";
 import { TMDBTestPart } from "@/pages/parts/admin/TMDBTestPart";
 import { WorkerTestPart } from "@/pages/parts/admin/WorkerTestPart";
