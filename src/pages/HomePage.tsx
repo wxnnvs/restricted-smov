@@ -7,6 +7,7 @@ import { WideContainer } from "@/components/layout/WideContainer";
 import { useDebounce } from "@/hooks/useDebounce";
 import { useRandomTranslation } from "@/hooks/useRandomTranslation";
 import { useSearchQuery } from "@/hooks/useSearchQuery";
+import { useAuth } from "@/hooks/auth/useAuth";
 import { Button } from "@/pages/About";
 import { HomeLayout } from "@/pages/layouts/HomeLayout";
 import { BookmarksPart } from "@/pages/parts/home/BookmarksPart";
@@ -14,6 +15,7 @@ import { HeroPart } from "@/pages/parts/home/HeroPart";
 import { WatchingPart } from "@/pages/parts/home/WatchingPart";
 import { SearchListPart } from "@/pages/parts/search/SearchListPart";
 import { SearchLoadingPart } from "@/pages/parts/search/SearchLoadingPart";
+
 
 function useSearch(search: string) {
   const [searching, setSearching] = useState<boolean>(false);
@@ -37,6 +39,10 @@ function useSearch(search: string) {
 // What the sigma?
 
 export function HomePage() {
+  const { loggedIn } = useAuth();
+  if (!loggedIn){
+    window.location.href = "/login";
+  }
   const { t } = useTranslation();
   const { t: randomT } = useRandomTranslation();
   const emptyText = randomT(`home.search.empty`);
