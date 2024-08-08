@@ -1,7 +1,9 @@
-# Sudo-Flix
-[![Sudo-Flix Image](.github/Sudo-Flix.png)](https://docs.undi.rest)  
+# Restricted Sudo-Flix
+![Sudo-Flix Image](.github/Sudo-Flix.png)
 
-**I *do not* endorse piracy of any kind I simply enjoy programming and large user counts.**
+**Sudo-Flix without public registration**
+
+*I **do not** endorse piracy of any kind I simply enjoy programming and large user counts.*
 
 ## Links And Resources
 | Service        | Link                                                             | Source Code                                              |
