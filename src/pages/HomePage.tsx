@@ -40,13 +40,13 @@ function useSearch(search: string) {
 
 export function HomePage() {
   const { loggedIn } = useAuth();
+  const navigate = useNavigate();
   if (!loggedIn){
-    window.location.href = "/login";
+    navigate("/login");
   }
   const { t } = useTranslation();
   const { t: randomT } = useRandomTranslation();
   const emptyText = randomT(`home.search.empty`);
-  const navigate = useNavigate();
   const [showBg, setShowBg] = useState<boolean>(false);
   const searchParams = useSearchQuery();
   const [search] = searchParams;
