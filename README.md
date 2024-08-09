@@ -7,7 +7,7 @@
 
 ## Running Locally
 > [!WARNING]
-> You'll need [pnpm](https://pnpm.io/installation) installed to use the setup script!
+> You'll need [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [pnpm](https://pnpm.io/installation) to be installed to use the setup script!
 
 1. Run `setup.sh` or `setup.bat` depending on your platform.
 2. Type `pnpm run dev` in your cmd/terminal
