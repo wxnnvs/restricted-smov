@@ -18,12 +18,18 @@ import {
   categories,
   tvCategories,
 } from "@/utils/discover";
+import { useAuth } from "@/hooks/auth/useAuth";
 
 import { SubPageLayout } from "./layouts/SubPageLayout";
 import { PageTitle } from "./parts/util/PageTitle";
 import { Icon, Icons } from "../components/Icon";
 
 export function Discover() {
+  const { loggedIn } = useAuth();
+  const navigate = useNavigate();
+  if (!loggedIn){
+    navigate("/login");
+  }
   const { t } = useTranslation();
   const [genres, setGenres] = useState<Genre[]>([]);
   const [randomMovie, setRandomMovie] = useState<Movie | null>(null);
