@@ -6,6 +6,8 @@
 *I **do not** endorse piracy of any kind I simply enjoy programming and large user counts.*
 
 ## Running Locally
+> [!WARNING]
+> You'll need [pnpm](https://pnpm.io/installation) installed to use the setup script!
 
 1. Run `setup.sh` or `setup.bat` depending on your platform.
 2. Type `pnpm run dev` in your cmd/terminal
