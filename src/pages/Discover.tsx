@@ -37,7 +37,6 @@ export function Discover() {
     [genreId: number]: Movie[];
   }>({});
   const [countdown, setCountdown] = useState<number | null>(null);
-  const navigate = useNavigate();
   const [categoryShows, setCategoryShows] = useState<{
     [categoryName: string]: Movie[];
   }>({});
