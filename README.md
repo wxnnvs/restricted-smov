@@ -6,21 +6,16 @@
 *I **do not** endorse piracy of any kind I simply enjoy programming and large user counts.*
 
 ## Running Locally
-Type the following commands into your terminal / command line to run Sudo-Flix locally
-```bash
-git clone https://github.com/wxnnvs/smov.git
-cd smov
-git pull
-pnpm install
-pnpm run dev
-```
-Then you can visit the local instance [here](http://localhost:5173) or, at local host on port 5173.
+
+1. Run `setup.sh` or `setup.bat` depending on your platform.
+2. Type `pnpm run dev` in your cmd/terminal
+3. Visit the local instance [here](http://localhost:5173) or, at local host on port 5173.
 
 
 ## Updating a sudo-flix Instance
 To update a sudo-flix instance you can type the below commands into a terminal at the root of your project.
 ```bash
-git remote add upstream https://github.com/wxnnvs/smov.git
+git remote add upstream https://github.com/wxnnvs/restricted-smov.git
 git fetch upstream # Grab the contents of the new remote source
 git checkout <YOUR_MAIN_BRANCH>  # Most likely this would be `origin/main`
 git merge upstream/main
