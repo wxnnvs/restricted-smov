@@ -8,6 +8,7 @@ import { get } from "@/backend/metadata/tmdb";
 import { ThiccContainer } from "@/components/layout/ThinContainer";
 import { Divider } from "@/components/utils/Divider";
 import { Flare } from "@/components/utils/Flare";
+import { useAuth } from "@/hooks/auth/useAuth";
 import { conf } from "@/setup/config";
 import {
   Category,
@@ -18,7 +19,6 @@ import {
   categories,
   tvCategories,
 } from "@/utils/discover";
-import { useAuth } from "@/hooks/auth/useAuth";
 
 import { SubPageLayout } from "./layouts/SubPageLayout";
 import { PageTitle } from "./parts/util/PageTitle";
