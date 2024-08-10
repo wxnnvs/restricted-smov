@@ -25,7 +25,6 @@ import { LoginPage } from "@/pages/Login";
 import { OnboardingPage } from "@/pages/onboarding/Onboarding";
 import { OnboardingExtensionPage } from "@/pages/onboarding/OnboardingExtension";
 import { OnboardingProxyPage } from "@/pages/onboarding/OnboardingProxy";
-import { RegisterPage } from "@/pages/Register";
 import { SupportPage } from "@/pages/Support";
 import { Layout } from "@/setup/Layout";
 import { useHistoryListener } from "@/stores/history";
