@@ -29,6 +29,25 @@ export function Navigation(props: NavigationProps) {
     navigate(path);
   };
 
+  /*
+               <a
+                href={conf().DISCORD_LINK}
+                target="_blank"
+                rel="noreferrer"
+                className="text-xl text-white tabbable rounded-full"
+              >
+                <IconPatch icon={Icons.DISCORD} clickable downsized />
+              </a>
+              <a
+                href={conf().GITHUB_LINK}
+                target="_blank"
+                rel="noreferrer"
+                className="text-xl text-white tabbable rounded-full"
+              >
+                <IconPatch icon={Icons.GITHUB} clickable downsized />
+              </a>
+  */
+
   return (
     <>
       {/* lightbar */}
@@ -93,22 +112,6 @@ export function Navigation(props: NavigationProps) {
               >
                 <BrandPill clickable header />
               </Link>
-              <a
-                href={conf().DISCORD_LINK}
-                target="_blank"
-                rel="noreferrer"
-                className="text-xl text-white tabbable rounded-full"
-              >
-                <IconPatch icon={Icons.DISCORD} clickable downsized />
-              </a>
-              <a
-                href={conf().GITHUB_LINK}
-                target="_blank"
-                rel="noreferrer"
-                className="text-xl text-white tabbable rounded-full"
-              >
-                <IconPatch icon={Icons.GITHUB} clickable downsized />
-              </a>
               <a
                 onClick={() => handleClick("/discover")}
                 rel="noreferrer"
