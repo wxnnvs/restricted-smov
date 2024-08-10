@@ -15,14 +15,14 @@
       "title": "The search results display the show or movie, why can't I play it?"
     },
     "q4": {
-      "body": "All data is synced to the sudo-backend which is different than the community backend and is independently hosted by me, anyone is free to use this as well.",
+      "body": "All data is synced to the community backend.",
       "title": "What about my data and stuff?"
     },
     "q5": {
-      "body": "Well W-movies has a twitter account that can be found in the footer of this page as well as a link to the source code on Github.",
+      "body": "Everything is right here.",
       "title": "How can I find out more?"
     },
-    "title": "About W-movies (^▽^)"
+    "title": "About W-movies"
   },
   "actions": {
     "copied": "Copied",
@@ -46,7 +46,7 @@
       "passphrasePlaceholder": "Passphrase",
       "submit": "Login",
       "title": "Login to your account",
-      "validationError": "Incorrect or incomplete passphrase /ᐠ. .ᐟ\\"
+      "validationError": "Incorrect or incomplete passphrase"
     },
     "register": {
       "information": {
@@ -89,7 +89,7 @@
   },
   "footer": {
     "legal": {
-      "disclaimer": "Disclaimer ◝(ᵔᵕᵔ)◜",
+      "disclaimer": "Disclaimer",
       "disclaimerText": "Please note: W-movies does not host any files itself but instead only display's content from 3rd party providers. Legal issues should be taken up with them."
     },
     "links": {
@@ -98,7 +98,7 @@
       "github": "GitHub",
       "twitter": "Twitter"
     },
-    "tagline": "Watch your favorite shows and movies for free with no ads ever! (っ'ヮ'c)"
+    "tagline": "Watch your favorite shows and movies for free with no ads ever!"
   },
   "global": {
     "name": "W-movies",
@@ -140,8 +140,7 @@
           "What's on your watchlist today?",
           "How was your day?",
           "My bad the site never works...",
-          "Isn't W-movies just the best?",
-          ">ᴗ<"
+          "Isn't W-movies just the best?"
         ]
       },
       "empty": {
@@ -150,7 +149,7 @@
           "There's nothing here :(",
           "So empty...",
           "Such emptiness.",
-          "Hi new user :3"
+          "Hi new user :)"
         ]
       },
       "sectionTitle": "Search results",
@@ -162,21 +161,18 @@
         "default": "What would you like to watch this afternoon?",
         "extra": ["Have you seen Blazing Saddles?"],
         "extra": ["Welcome to W-movies!"],
-        "extra": [" /ᐠ>ヮ<ᐟ\\ฅ"],
         "extra": ["Viva la W-movies!"]
       },
       "morning": {
         "default": "What would you like to watch this morning?",
         "extra": ["Can't go wrong with Friends"],
         "extra": ["I hear The Expanse is popular"],
-        "extra": ["\"૮₍  ˶•⤙•˶ ₎ა"],
         "extra": ["Viva la W-movies!"]
       },
       "night": {
         "default": "What would you like to watch tonight?",
         "extra": ["Rick & Morty is great with friends!"],
         "extra": ["Go smoke and watch The Simpsons!"],
-        "extra": ["(づ ᴗ _ᴗ)づ♡"],
         "extra": ["Viva la W-movies!"]
       },
       "420": {
@@ -204,7 +200,7 @@
     "menu": {
       "about": "About us",
       "logout": "Log out",
-      "register": "Sync to sudo-cloud",
+      "register": "Sync to cloud",
       "settings": "Settings",
       "support": "Support",
       "discover": "Discover"
@@ -214,7 +210,7 @@
     "badge": "Not found",
     "goHome": "Back to home",
     "reloadButton": "Try again",
-    "message": "We looked everywhere: under the bins, in the closet, behind the proxy but ultimately couldn't find the page you are looking for. (ಥ﹏ಥ)",
+    "message": "We looked everywhere: under the bins, in the closet, behind the proxy but ultimately couldn't find the page you are looking for.",
     "title": "Couldn't find that page"
   },
   "downtimeNotice": {
@@ -241,7 +237,7 @@
       "notDetecting": "Installed on Chrome, but the site isn't detecting it? Try reloading the page!",
       "notDetectingAction": "Reload page",
       "status": {
-        "disallowed": "Extension is not enabled for this page (,,>﹏<,,)",
+        "disallowed": "Extension is not enabled for this page",
         "disallowedAction": "Enable extension",
         "failed": "Failed to request status",
         "loading": "Waiting for you to install the extension",
@@ -269,7 +265,7 @@
       "explainer": "To get the best streams possible, you will need to choose which streaming method you want to use.",
       "options": {
         "default": {
-          "text": "I don't want good quality streams,<0 /> <1>use the default setup ▄︻デ══━一 ʕ•͡-•ʔ</1>"
+          "text": "I don't want good quality streams,<0 /> <1>use the default setup</1>"
         },
         "extension": {
           "action": "Install extension",
@@ -324,7 +320,7 @@
       },
       "episodes": {
         "button": "Episodes",
-        "emptyState": "There are no episodes in this season, check back later (sorry :3)...",
+        "emptyState": "There are no episodes in this season, check back later (sorry)...",
         "episodeBadge": "E{{episode}}",
         "loadingError": "Error loading season",
         "loadingList": "Loading...",
@@ -363,7 +359,7 @@
           "title": "No embeds found"
         },
         "noStream": {
-          "text": "This source has no streams for this movie or show. /ᐠ - ˕ -マ Ⳋ",
+          "text": "This source has no streams for this movie or show.",
           "title": "No stream :("
         },
         "title": "Sources",
@@ -382,7 +378,7 @@
         },
         "title": "Subtitles",
         "unknownLanguage": "Unknown",
-        "dropSubtitleFile": "Drop subtitle file here! >_<",
+        "dropSubtitleFile": "Drop subtitle file here!",
         "scrapeButton": "Scrape subtitles",
         "empty": "There are no provided subtitles for this.",
         "notFound": "None of the available options match your query"
@@ -401,7 +397,7 @@
       "extensionPermission": {
         "badge": "Permission Missing",
         "button": "Use extension",
-        "text": "You have the browser extension, but we need your permission to get started using the extension. (¬_¬)",
+        "text": "You have the browser extension, but we need your permission to get started using the extension.",
         "title": "Configure the extension"
       },
       "failed": {
@@ -438,7 +434,7 @@
     "scraping": {
       "items": {
         "failure": "Error occurred",
-        "notFound": "Doesn't have the video (╥﹏╥)",
+        "notFound": "Doesn't have the video",
         "pending": "Checking for videos..."
       },
       "notFound": {
@@ -467,30 +463,30 @@
       "description": "Please prove your humanity by completing the quick challenge, this is to keep W-movies safe.",
       "error": "Failed to verify your humanity! Please try again.",
       "title": "Are You a Robot 🤖?",
-      "verifyingHumanity": "Verifying your humanity... (^▽^)👍"
+      "verifyingHumanity": "Verifying your humanity..."
     }
   },
   "support": {
     "title": "Support",
     "text": "W-movies is designed to be as user-friendly as possible. However, people still have questions and issues. This page is here to help resolve these shortcomings",
     "q1": {
-      "body": "Well, you can join the official <0>W-movies discord</0> and ask questions there or you can email the one provided at the bottom of this page.",
+      "body": "Add me on discord: <bold>@wxnnvs</bold>",
       "title": "Where can I get help?"
     },
     "q2": {
-      "body": "We have a <0>GitHub</0> where you can create a detailed issue in our repository. Additionally, if you wish, you can create a pull request to fix the issue yourself.",
+      "body": "Use discord",
       "title": "How can I report a bug or issue?"
     }
   },
   "jip": {
-    "title": "Jip",
-    "text": "W-movies didn't fall out of a coconut tree, it was made mostly by a single person (a very epic one at that).",
+    "title": "Wannes",
+    "text": "W-movies is maintained by me",
     "q1": {
-      "body": "Well, you can join the official <0>W-movies discord</0> and ask questions there or you can email the one provided at the bottom of this page.",
+      "body": "add me on discord <bold>@wxnnvs</bold>",
       "title": "Where can I get help?"
     },
     "q2": {
-      "body": "We have a <0>GitHub</0> where you can create a detailed issue in our repository. Additionally, if you wish, you can create a pull request to fix the issue yourself.",
+      "body": "discord",
       "title": "How can I report a bug or issue?"
     }
   },
@@ -530,7 +526,7 @@
         "delete": {
           "button": "Delete account",
           "confirmButton": "Delete account",
-          "confirmDescription": "Are you sure you want to delete your account? All your data will be lost! ૮₍˶Ó﹏Ò ⑅₎ა",
+          "confirmDescription": "Are you sure you want to delete your account? All your data will be lost!",
           "confirmTitle": "Are you sure?",
           "text": "This action is irreversible. All data will be deleted and nothing can be recovered.",
           "title": "Delete account"
@@ -552,8 +548,8 @@
       },
       "register": {
         "cta": "Get started",
-        "text": "Share your watch progress between devices and keep them synced. ( ̧⸝⸝⍢⸝⸝)ෆ",
-        "title": "Sync to the sudo-cloud"
+        "text": "Share your watch progress between devices and keep them synced.",
+        "title": "Sync to the cloud"
       },
       "title": "Account"
     },
@@ -581,7 +577,7 @@
           "description": "It seems that one or more items in this setup need your attention.",
           "title": "Something needs your attention 😱"
         },
-        "itemError": "There is something wrong with this setting. Go through setup again to fix it. (ᴗ_ ᴗ。)",
+        "itemError": "There is something wrong with this setting. Go through setup again to fix it.",
         "items": {
           "default": "Default setup",
           "extension": "Extension",
@@ -589,7 +585,7 @@
         },
         "redoSetup": "Redo setup",
         "successStatus": {
-          "description": "All things are in place for you to start watching your favorite media. (๑>◡<๑)",
+          "description": "All things are in place for you to start watching your favorite media.",
           "title": "Everything is set up!"
         },
         "unsetStatus": {
@@ -601,7 +597,7 @@
       "workers": {
         "addButton": "Add new worker",
         "description": "To make the application function, all traffic is routed through proxies. Enable this if you want to bring your own workers. <0>Instructions.</0>",
-        "emptyState": "No workers yet (｡•́︿•̀｡), add one below",
+        "emptyState": "No workers yet, add one below",
         "label": "Use custom proxy workers",
         "urlLabel": "Worker URLs",
         "urlPlaceholder": "https://"
@@ -609,7 +605,7 @@
     },
     "preferences": {
       "language": "Application language",
-      "languageDescription": "Language applied to the entire application, only English has silly stuff 🙁.",
+      "languageDescription": "Language applied to the entire application.",
       "thumbnail": "Generate thumbnails",
       "thumbnailDescription": "Most of the time, videos don't have thumbnails. You can enable this setting to generate them on the fly but they can make your video slower.",
       "thumbnailLabel": "Generate thumbnails",
@@ -645,6 +641,6 @@
       "title": "Subtitles",
       "textBoldLabel": "Bold text"
     },
-    "unsaved": "You have unsaved changes... ฅ^•ﻌ•^ฅ"
+    "unsaved": "You have unsaved changes..."
   }
 }
