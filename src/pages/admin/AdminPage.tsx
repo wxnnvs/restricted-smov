@@ -1,20 +1,20 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 import { ThinContainer } from "@/components/layout/ThinContainer";
 import { Heading1, Paragraph } from "@/components/utils/Text";
+import { useAuth } from "@/hooks/auth/useAuth";
 import { SubPageLayout } from "@/pages/layouts/SubPageLayout";
-import { AccountCreatePart } from "@/pages/parts/auth/AccountCreatePart";
 import { ConfigValuesPart } from "@/pages/parts/admin/ConfigValuesPart";
 import { TMDBTestPart } from "@/pages/parts/admin/TMDBTestPart";
 import { WorkerTestPart } from "@/pages/parts/admin/WorkerTestPart";
-import { useAuth } from "@/hooks/auth/useAuth";
+import { AccountCreatePart } from "@/pages/parts/auth/AccountCreatePart";
 
 import { BackendTestPart } from "../parts/admin/BackendTestPart";
 
 export function AdminPage() {
   const navigate = useNavigate();
   const { loggedIn } = useAuth();
-  if (!loggedIn){
+  if (!loggedIn) {
     navigate("/login");
   }
 
