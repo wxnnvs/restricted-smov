@@ -27,7 +27,7 @@ import { Icon, Icons } from "../components/Icon";
 export function Discover() {
   const { loggedIn } = useAuth();
   const navigate = useNavigate();
-  if (!loggedIn){
+  if (!loggedIn) {
     navigate("/login");
   }
   const { t } = useTranslation();
