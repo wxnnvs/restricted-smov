@@ -16,7 +16,6 @@ import { WatchingPart } from "@/pages/parts/home/WatchingPart";
 import { SearchListPart } from "@/pages/parts/search/SearchListPart";
 import { SearchLoadingPart } from "@/pages/parts/search/SearchLoadingPart";
 
-
 function useSearch(search: string) {
   const [searching, setSearching] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
@@ -41,7 +40,7 @@ function useSearch(search: string) {
 export function HomePage() {
   const { loggedIn } = useAuth();
   const navigate = useNavigate();
-  if (!loggedIn){
+  if (!loggedIn) {
     navigate("/login");
   }
   const { t } = useTranslation();
