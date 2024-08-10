@@ -101,9 +101,6 @@ export function LoginFormPart(props: LoginFormPartProps) {
           {t("auth.login.submit")}
         </Button>
       </LargeCardButtons>
-      <p className="text-center mt-6">
-        Registration is currently disabled
-      </p>
     </LargeCard>
   );
 }
