@@ -4,10 +4,10 @@ import { useTranslation } from "react-i18next";
 import { To, useNavigate } from "react-router-dom";
 
 import { WideContainer } from "@/components/layout/WideContainer";
+import { useAuth } from "@/hooks/auth/useAuth";
 import { useDebounce } from "@/hooks/useDebounce";
 import { useRandomTranslation } from "@/hooks/useRandomTranslation";
 import { useSearchQuery } from "@/hooks/useSearchQuery";
-import { useAuth } from "@/hooks/auth/useAuth";
 import { Button } from "@/pages/About";
 import { HomeLayout } from "@/pages/layouts/HomeLayout";
 import { BookmarksPart } from "@/pages/parts/home/BookmarksPart";
