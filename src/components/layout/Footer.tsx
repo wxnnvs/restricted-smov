@@ -57,7 +57,19 @@ function Dmca() {
 }
 
 export function Footer() {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
+
+  /*
+          <FooterLink icon={Icons.GITHUB} href={conf().GITHUB_LINK}>
+            {t("footer.links.github")}
+          </FooterLink>
+          <FooterLink icon={Icons.DISCORD} href={conf().DISCORD_LINK}>
+            {t("footer.links.discord")}
+          </FooterLink>
+          <FooterLink icon={Icons.TWITTER} href={conf().TWITTER_LINK}>
+            {t("footer.links.twitter")}
+          </FooterLink> --->
+  */
 
   return (
     <footer className="mt-16 border-t border-type-divider py-16 md:py-8">
@@ -75,15 +87,6 @@ export function Footer() {
           <p className="mt-3">{t("footer.legal.disclaimerText")}</p>
         </div>
         <div className="flex flex-wrap gap-[0.5rem] -ml-3">
-          <!--- <FooterLink icon={Icons.GITHUB} href={conf().GITHUB_LINK}>
-            {t("footer.links.github")}
-          </FooterLink>
-          <FooterLink icon={Icons.DISCORD} href={conf().DISCORD_LINK}>
-            {t("footer.links.discord")}
-          </FooterLink>
-          <FooterLink icon={Icons.TWITTER} href={conf().TWITTER_LINK}>
-            {t("footer.links.twitter")}
-          </FooterLink> --->
           <div className="inline md:hidden">
             <Dmca />
           </div>
