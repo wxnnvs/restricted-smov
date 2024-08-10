@@ -113,7 +113,7 @@ export function conf(): RuntimeConfig {
     HAS_ONBOARDING: getKey("HAS_ONBOARDING", "false") === "true",
     ALLOW_AUTOPLAY: getKey("ALLOW_AUTOPLAY", "false") === "true",
     TURNSTILE_KEY: getKey("TURNSTILE_KEY"),
-    DISALLOWED_IDS: getKey("DISALLOWED_IDS", "")
+    DISALLOWED_IDS: getKey("DISALLOWED_IDS", "movie-238")
       .split(",")
       .map((v) => v.trim())
       .filter((v) => v.length > 0), // Should be comma-seperated and contain the media type and ID, formatted like so: movie-753342,movie-753342,movie-753342
