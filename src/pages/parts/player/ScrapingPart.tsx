@@ -90,7 +90,7 @@ export function ScrapingPart(props: ScrapingProps) {
 
   if (failedStartScrape)
     return <WarningPart>{t("player.turnstile.error")}</WarningPart>;
-
+  
   return (
     <div
       className="h-full w-full relative dir-neutral:origin-top-left flex"
@@ -110,41 +110,47 @@ export function ScrapingPart(props: ScrapingProps) {
         })}
         ref={listRef}
       >
-        {sourceOrder
-          .filter((order) => order.id === currentSource)
-          .map((order) => {
-            const source = sources[order.id];
-            return (
-              <div className="transition-opacity duration-100" key={order.id}>
-                <ScrapeCard
-                  id={order.id}
-                  name={source.name}
-                  status={source.status}
-                  hasChildren={order.children.length > 0}
-                  percentage={source.percentage}
+        {sourceOrder.map((order) => {
+          const source = sources[order.id];
+          const distance = Math.abs(
+            sourceOrder.findIndex((o) => o.id === order.id) -
+              currentProviderIndex,
+          );
+        return (
+            <div
+              className="transition-opacity duration-100"
+              style={{ opacity: Math.max(0, 1 - distance * 0.3) }}
+              key={order.id}
+            >
+              <ScrapeCard
+                id={order.id}
+                name={source.name}
+                status={source.status}
+                hasChildren={order.children.length > 0}
+                percentage={source.percentage}
+              >
+                <div
+                  className={classNames({
+                    "space-y-6 mt-8": order.children.length > 0,
+                  })}
                 >
-                  <div
-                    className={classNames({
-                      "space-y-6 mt-8": order.children.length > 0,
-                    })}
-                  >
-                    {order.children.map((embedId) => {
-                      const embed = sources[embedId];
-                      return (
-                        <ScrapeItem
-                          id={embedId}
-                          name={embed.name}
-                          status={embed.status}
-                          percentage={embed.percentage}
-                          key={embedId}
-                        />
-                      );
-                    })}
-                  </div>
-                </ScrapeCard>
-              </div>
-            );
-          })}
+                  {order.children.map((embedId) => {
+                    const embed = sources[embedId];
+                    return (
+                      <ScrapeItem
+                        id={embedId}
+                        name={embed.name}
+                        status={embed.status}
+                        percentage={embed.percentage}
+                        key={embedId}
+                      />
+                    );
+                  })}
+                </div>
+              </ScrapeCard>
+            </div>
+          );
+        })}
         <div className="flex gap-3 pb-3">
           <Button
             href="/"
@@ -166,4 +172,4 @@ export function ScrapingPart(props: ScrapingProps) {
       </div>
     </div>
   );
-}
+  }
