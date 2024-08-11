@@ -145,7 +145,7 @@ export function ScrapingPart(props: ScrapingProps) {
             sourceOrder.findIndex((o) => o.id === order.id) -
               currentProviderIndex,
           );
-          return (
+        return (
             <div
               className="transition-opacity duration-100"
               style={{ opacity: Math.max(0, 1 - distance * 0.3) }}
