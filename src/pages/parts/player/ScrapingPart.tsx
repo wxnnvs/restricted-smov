@@ -155,7 +155,7 @@ export function ScrapingPart(props: ScrapingProps) {
                 id={order.id}
                 name="Retrieving media..."
                 status={source.status}
-                hasChildren=false
+                hasChildren={1<0}
                 percentage={source.percentage}
               >
                 <div
