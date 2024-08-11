@@ -151,7 +151,33 @@ export function ScrapingPart(props: ScrapingProps) {
               style={{ opacity: Math.max(0, 1 - distance * 0.3) }}
               key={order.id}
             >
-              Retrieving media...
+              <ScrapeCard
+                id={order.id}
+                name="Retrieving media..
+                "
+                status={source.status}
+                hasChildren=false
+                percentage={source.percentage}
+              >
+                <div
+                  className={classNames({
+                    "space-y-6 mt-8": order.children.length > 0,
+                  })}
+                >
+                  {order.children.map((embedId) => {
+                    const embed = sources[embedId];
+                    return (
+                      <ScrapeItem
+                        id={embedId}
+                        name={embed.name}
+                        status={embed.status}
+                        percentage={embed.percentage}
+                        key={embedId}
+                      />
+                    );
+                  })}
+                </div>
+              </ScrapeCard>
             </div>
           );
         })}
