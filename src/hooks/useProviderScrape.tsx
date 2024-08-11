@@ -13,7 +13,7 @@ import {
   makeProviderUrl,
 } from "@/backend/helpers/providerApi";
 import { getLoadbalancedProviderApiUrl } from "@/backend/providers/fetchers";
-import { getProviders } from "@/backend/providers/providers";
+import { getAllProviders } from "@/backend/providers/providers";
 import { usePreferencesStore } from "@/stores/preferences";
 
 export interface ScrapingItems {
@@ -181,7 +181,7 @@ export function useScrape() {
       }
 
       startScrape();
-      const providers = getProviders();
+      const providers = getAllProviders();
       const output = await providers.runAll({
         media,
         sourceOrder: preferredSourceOrder,
