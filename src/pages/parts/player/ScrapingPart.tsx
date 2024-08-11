@@ -82,15 +82,15 @@ export function ScrapingPart(props: ScrapingProps) {
     })().catch(() => setFailedStartScrape(true));
   }, [startScraping, props, report, isMounted]);
 
-  let currentProviderIndex = sourceOrder.findIndex(
-    (s) => s.id === currentSource || s.children.includes(currentSource ?? ""),
-  );
-  if (currentProviderIndex === -1)
-    currentProviderIndex = sourceOrder.length - 1;
-
-  if (failedStartScrape)
+  if (failedStartScrape) {
     return <WarningPart>{t("player.turnstile.error")}</WarningPart>;
-  
+  }
+
+  // Find the current provider being scraped
+  const currentProvider = sourceOrder.find(
+    (s) => s.id === currentSource || s.children.includes(currentSource ?? "")
+  );
+
   return (
     <div
       className="h-full w-full relative dir-neutral:origin-top-left flex"
@@ -110,47 +110,39 @@ export function ScrapingPart(props: ScrapingProps) {
         })}
         ref={listRef}
       >
-        {sourceOrder.map((order) => {
-          const source = sources[order.id];
-          const distance = Math.abs(
-            sourceOrder.findIndex((o) => o.id === order.id) -
-              currentProviderIndex,
-          );
-        return (
-            <div
-              className="transition-opacity duration-100"
-              style={{ opacity: Math.max(0, 1 - distance * 0.3) }}
-              key={order.id}
+        {currentProvider && (
+          <div
+            className="transition-opacity duration-100"
+            style={{ opacity: 1 }}
+          >
+            <ScrapeCard
+              id={currentProvider.id}
+              name="Retrieving media..."
+              status={sources[currentProvider.id]?.status}
+              hasChildren={currentProvider.children.length > 0}
+              percentage={sources[currentProvider.id]?.percentage}
             >
-              <ScrapeCard
-                id={order.id}
-                name={source.name}
-                status={source.status}
-                hasChildren={order.children.length > 0}
-                percentage={source.percentage}
+              <div
+                className={classNames({
+                  "space-y-6 mt-8": currentProvider.children.length > 0,
+                })}
               >
-                <div
-                  className={classNames({
-                    "space-y-6 mt-8": order.children.length > 0,
-                  })}
-                >
-                  {order.children.map((embedId) => {
-                    const embed = sources[embedId];
-                    return (
-                      <ScrapeItem
-                        id={embedId}
-                        name={embed.name}
-                        status={embed.status}
-                        percentage={embed.percentage}
-                        key={embedId}
-                      />
-                    );
-                  })}
-                </div>
-              </ScrapeCard>
-            </div>
-          );
-        })}
+                {currentProvider.children.map((embedId) => {
+                  const embed = sources[embedId];
+                  return (
+                    <ScrapeItem
+                      id={embedId}
+                      name={embed.name}
+                      status={embed.status}
+                      percentage={embed.percentage}
+                      key={embedId}
+                    />
+                  );
+                })}
+              </div>
+            </ScrapeCard>
+          </div>
+        )}
         <div className="flex gap-3 pb-3">
           <Button
             href="/"
@@ -172,4 +164,4 @@ export function ScrapingPart(props: ScrapingProps) {
       </div>
     </div>
   );
-  }
+}
