@@ -153,8 +153,7 @@ export function ScrapingPart(props: ScrapingProps) {
             >
               <ScrapeCard
                 id={order.id}
-                name="Retrieving media..
-                "
+                name="Retrieving media..."
                 status={source.status}
                 hasChildren=false
                 percentage={source.percentage}
