@@ -91,6 +91,35 @@ export function ScrapingPart(props: ScrapingProps) {
   if (failedStartScrape)
     return <WarningPart>{t("player.turnstile.error")}</WarningPart>;
 
+  /*
+             <ScrapeCard
+                id={order.id}
+                name={source.name}
+                status={source.status}
+                hasChildren={order.children.length > 0}
+                percentage={source.percentage}
+              >
+                <div
+                  className={classNames({
+                    "space-y-6 mt-8": order.children.length > 0,
+                  })}
+                >
+                  {order.children.map((embedId) => {
+                    const embed = sources[embedId];
+                    return (
+                      <ScrapeItem
+                        id={embedId}
+                        name={embed.name}
+                        status={embed.status}
+                        percentage={embed.percentage}
+                        key={embedId}
+                      />
+                    );
+                  })}
+                </div>
+              </ScrapeCard>
+  */
+  
   return (
     <div
       className="h-full w-full relative dir-neutral:origin-top-left flex"
@@ -122,32 +151,7 @@ export function ScrapingPart(props: ScrapingProps) {
               style={{ opacity: Math.max(0, 1 - distance * 0.3) }}
               key={order.id}
             >
-              <ScrapeCard
-                id={order.id}
-                name={source.name}
-                status={source.status}
-                hasChildren={order.children.length > 0}
-                percentage={source.percentage}
-              >
-                <div
-                  className={classNames({
-                    "space-y-6 mt-8": order.children.length > 0,
-                  })}
-                >
-                  {order.children.map((embedId) => {
-                    const embed = sources[embedId];
-                    return (
-                      <ScrapeItem
-                        id={embedId}
-                        name={embed.name}
-                        status={embed.status}
-                        percentage={embed.percentage}
-                        key={embedId}
-                      />
-                    );
-                  })}
-                </div>
-              </ScrapeCard>
+              Retrieving media...
             </div>
           );
         })}
