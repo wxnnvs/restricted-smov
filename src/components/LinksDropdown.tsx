@@ -164,15 +164,16 @@ export function LinksDropdown(props: { children: React.ReactNode }) {
           <DropdownLink href="/discover" icon={Icons.RISING_STAR}>
             {t("navigation.menu.discover")}
           </DropdownLink>
+          <DropdownLink href="/support" icon={Icons.MAIL}>
+            Support
+          </DropdownLink>
           {deviceName ? (
-            <DropdownLink className="!text-type-danger opacity-75 hover:opacity-100"
+            <DropdownLink
+              className="!text-type-danger opacity-75 hover:opacity-100"
               icon={Icons.LOGOUT}
               onClick={logout}
             >
               {t("navigation.menu.logout")}
-            </DropdownLink>
-            <DropdownLink href="/support" icon={Icons.MAIL}>
-              {t("Support")}
             </DropdownLink>
           ) : null}
           <Divider />
