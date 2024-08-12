@@ -109,6 +109,21 @@ export function LinksDropdown(props: { children: React.ReactNode }) {
   const toggleOpen = useCallback(() => {
     setOpen((s) => !s);
   }, []);
+  
+  /*
+          <div className="my-4 flex justify-center items-center gap-4">
+            <CircleDropdownLink
+              href={conf().DISCORD_LINK}
+              icon={Icons.DISCORD}
+            />
+            <CircleDropdownLink href={conf().GITHUB_LINK} icon={Icons.GITHUB} />
+            <CircleDropdownLink
+              href={conf().TWITTER_LINK}
+              icon={Icons.TWITTER}
+            />
+            <CircleDropdownLink href="/support" icon={Icons.MAIL} />
+          </div>
+  */
 
   return (
     <div className="relative is-dropdown">
@@ -157,20 +172,11 @@ export function LinksDropdown(props: { children: React.ReactNode }) {
             >
               {t("navigation.menu.logout")}
             </DropdownLink>
+            <DropdownLink href="/support" icon={Icons.MAIL}>
+              {t("Support")}
+            </DropdownLink>
           ) : null}
           <Divider />
-          <div className="my-4 flex justify-center items-center gap-4">
-            <CircleDropdownLink
-              href={conf().DISCORD_LINK}
-              icon={Icons.DISCORD}
-            />
-            <CircleDropdownLink href={conf().GITHUB_LINK} icon={Icons.GITHUB} />
-            <CircleDropdownLink
-              href={conf().TWITTER_LINK}
-              icon={Icons.TWITTER}
-            />
-            <CircleDropdownLink href="/support" icon={Icons.MAIL} />
-          </div>
         </div>
       </Transition>
     </div>
